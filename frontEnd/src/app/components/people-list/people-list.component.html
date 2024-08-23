@@ -1,0 +1,24 @@
+<div>
+  <app-search (search)="onSearch($event)"></app-search>
+
+  <div class="sort-buttons">
+    <button mat-raised-button color="primary" (click)="onSort('nivel_de_satisfaccion', 'asc')">Sort Satisfaction Asc</button>
+    <button mat-raised-button color="secondary" (click)="onSort('nivel_de_satisfaccion', 'desc')">Sort Satisfaction Desc</button>
+    <button mat-raised-button color="primary" (click)="onSort('categoria', 'asc')">Sort Category Asc</button>
+    <button mat-raised-button color="primary" (click)="onSort('categoria', 'desc')">Sort Category Desc</button>
+  </div>
+
+  <div  fxLayout="row">
+     <app-person-card fxLayoutAlign="space-around center"
+    *ngFor="let person of people" 
+    [person]="person"
+    (removeFavorite)="toggleFavorite($event)">
+  </app-person-card>
+  </div>
+
+  <div class="pagination-buttons">
+
+    <button  mat-stroked-button (click)="goToPreviousPage()">Previous</button>
+    <button  mat-stroked-button (click)="goToNextPage()">Next</button>
+  </div>
+</div>

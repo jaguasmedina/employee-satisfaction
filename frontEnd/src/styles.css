@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.pagination-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    clear: both;
+    border-top: 2px solid black;
+  }
+  
+  mat-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  mat-list-avatar {
+    margin-right: 20px;
+  }
+  
+  mat-list-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  mat-line span {
+    font-weight: bold;
+  }
+  
+  mat-icon-button {
+    margin-left: 10px;
+  }
+  

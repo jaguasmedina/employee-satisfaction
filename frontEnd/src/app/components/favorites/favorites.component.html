@@ -1,0 +1,12 @@
+<div>
+    <app-search (search)="onSearch($event)"></app-search>
+  
+    <div class="card-container">
+      <app-person-card 
+      *ngFor="let person of favorites" 
+      [person]="person"
+      (removeFavorite)="removeFavorite($event)">
+    </app-person-card>
+    </div>
+  </div>
+  

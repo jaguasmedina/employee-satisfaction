@@ -1,0 +1,6 @@
+.person-card {
+    margin: 10px;
+    max-width: calc(33.333% - 16px); 
+    box-sizing: border-box;
+    float: left;
+  }

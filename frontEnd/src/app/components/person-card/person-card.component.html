@@ -1,0 +1,22 @@
+<mat-card class="person-card">
+    <mat-card-header>
+      <div mat-card-avatar class="company-logo" [ngStyle]="{'background-image': 'url(' + person.company.logo_url + ')'}"></div>
+      <mat-card-title>{{ person.nombre_completo }}</mat-card-title>
+      <mat-card-subtitle>{{ person.company.name }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Nivel de Satisfacción: {{ person.nivel_de_satisfaccion }}<br />
+        Categoría: {{ person.categoria }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="onRemoveFavorite()" *ngIf="person.is_favorite; else notFavorite">
+        Remove from Favorites
+      </button>
+      <ng-template #notFavorite>
+        <button mat-button (click)="onRemoveFavorite()">Add to Favorite</button>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
+  
